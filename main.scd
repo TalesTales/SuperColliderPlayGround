@@ -1,5 +1,4 @@
-(
-s.boot
-a = SinOsc.ar(440!2);
-a.play
-)
+3
+f = 3
+f = f.cubed;
+f = f+f;

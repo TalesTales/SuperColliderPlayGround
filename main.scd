@@ -1,4 +1,4 @@
-3
-f = 3
-f = f.cubed;
-f = f+f;
+/* Felipe Bonilla Parra
+@misterBmisterB 2023
+.scd Donde voy aprendiendo SClang
+*/

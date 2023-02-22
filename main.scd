@@ -2,21 +2,21 @@
 @misterBmisterB 2023
 .scd Donde voy aprendiendo SClang
 */
+Server.default.options.device_("Scarlett 18i8 USB");
 s.boot;
+(
+SynthDef(\sinte01, {
+    arg frec = 400, lf = 1;
+    var sonido, varLFO;
+    varLFO = SinOsc.kr(lf);
+    frec = frec*varLFO;
+    sonido = SinOsc.ar(frec!2) * 0.125;
+    Out.ar(0,sonido);
+}).add;
+)
 
-m = {SinOsc.ar(700!2) * 0.125}.play;
+m = Synth.new(\sinte01);
+m.set(\frec, 100, \lf, 0.1);
 m.free;
 
-(
-z = {
-    arg ruido = 2;
-    var frec, amp, sonido;
-    frec = LFNoise0.kr(ruido).exprange(100,1000);
-    amp = LFNoise1.kr(12).exprange(0.2, 1);
-    sonido = SinOsc.ar(frec!2)*0.125;
-}.play;
-)
-y = 1;
-z.set(\ruido, y+y);
-z.free;
 s.quit;

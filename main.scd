@@ -1,5 +1,5 @@
 /* Felipe Bonilla Parra
-@misterBmisterB 2023
+@talestales 2025
 .scd Donde voy aprendiendo SClang
 */
 Server.default.options.outDevice_("Audífonos externo");
